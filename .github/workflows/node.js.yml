@@ -28,6 +28,9 @@ jobs:
 
       - name: Build
         run: npm run build  # O el comando para construir tu aplicación
-
+        
+      - name: imprimiendo
+        run: echo ${{ secrets.VERCEL_TOKEN }}
+        
       - name: Deploy to Vercel
         run: npx vercel --token ${{ secrets.VERCEL_TOKEN }}  # Asegúrate de configurar la variable de entorno VERCEL_TOKEN en los secretos de tu repositorio en GitHub
