@@ -5,10 +5,9 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [ "main" ] # Cambiar "main" por el nombre de la rama principal de tu repositorio (por ejemplo, "master" o "main")
+    branches: ["main"] # Cambiar "main" por el nombre de la rama principal de tu repositorio (por ejemplo, "master" o "main")
   pull_request:
-    branches: [ "main" ]
-
+    branches: ["main"]
 
 jobs:
   build-and-deploy:
@@ -21,21 +20,21 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'  # Cambiar la versión de Node.js según tus necesidades
+          node-version: "18" # Cambiar la versión de Node.js según tus necesidades
 
       - name: Install dependencies
-        run: npm ci  # O yarn install si usas Yarn
+        run: npm ci # O yarn install si usas Yarn
 
       - name: Build
-        run: npm run build  # O el comando para construir tu aplicación
-        
+        run: npm run build # O el comando para construir tu aplicación
+
       - name: imprimiendo
         run: echo ${{ secrets.VERCEL_TOKEN }}
-        
+
       - name: Deploy to Vercel Action
         uses: BetaHuhn/deploy-to-vercel-action@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}  # Asegúrate de configurar la variable de entorno VERCEL_TOKEN en los secretos de tu repositorio en GitHub
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }} # Asegúrate de configurar la variable de entornos en los secretos de tu repositorio en GitHub

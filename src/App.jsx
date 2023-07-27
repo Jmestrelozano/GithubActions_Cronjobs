@@ -18,7 +18,7 @@ function App() {
           />
         </a>
       </div>
-      <h1>Github actions and Cronjobs</h1>
+      <h1>Github actions and Cronjobs!!!</h1>
     </>
   );
 }
