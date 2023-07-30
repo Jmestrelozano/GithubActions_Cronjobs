@@ -30,6 +30,10 @@ jobs:
 
       - name: imprimiendo
         run: echo ${{ secrets.VERCEL_TOKEN }}
+        
+      - name: Obtener URL de ejecución
+        run: |
+          echo "URL de ejecución: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
       - name: Deploy to Vercel Action
         uses: BetaHuhn/deploy-to-vercel-action@v1
