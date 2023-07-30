@@ -30,10 +30,6 @@ jobs:
 
       - name: imprimiendo
         run: echo ${{ secrets.VERCEL_TOKEN }}
-        
-      - name: Obtener URL de ejecución
-        run: |
-          echo "URL de ejecución: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
       - name: Deploy to Vercel Action
         uses: BetaHuhn/deploy-to-vercel-action@v1
@@ -42,3 +38,7 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }} # Asegúrate de configurar la variable de entornos en los secretos de tu repositorio en GitHub
+
+      - name: Obtener URL de ejecución
+        run: |
+          echo "URL de ejecución: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
