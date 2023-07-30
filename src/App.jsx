@@ -1,5 +1,5 @@
 import "./App.css";
-// import translations from "./translations/ch/global.json";
+import translations from "./translations/ch/global.json";
 
 function App() {
   return (
@@ -20,8 +20,8 @@ function App() {
         </a>
       </div>
       <h1>Github actions and Cronjobs!!!</h1>
-      {/* <h2>Traducciones</h2>
-      {JSON.stringify(translations)} */}
+      <h2>Traducciones</h2>
+      {JSON.stringify(translations)}
     </>
   );
 }

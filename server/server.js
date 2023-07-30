@@ -27,6 +27,7 @@ app.get("/", async (req, res) => {
   await fs.writeFile(filePath, jsonData);
 
   res.send("Archivos JSON estáticos generados correctamente.");
+  console.log("Archivos JSON estáticos generados correctamente.");
 });
 
 // const port = 3005;
