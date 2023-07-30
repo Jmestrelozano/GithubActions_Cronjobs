@@ -29,9 +29,9 @@ app.get("/", async (req, res) => {
   res.send("Archivos JSON estáticos generados correctamente.");
 });
 
-// const port = 3005;
-// app.listen(port, () => {
-//   console.log(
-//     `Servidor de SSR para generación de JSON estáticos activo en http://localhost:${port}`
-//   );
-// });
+const port = 3005;
+app.listen(port, () => {
+  console.log(
+    `Servidor de SSR para generación de JSON estáticos activo en http://localhost:${port}`
+  );
+});
