@@ -85,3 +85,5 @@ Recuerda que para obtner el `ORG_ID` y  `PROJECT_ID` de tu proyecto de vercel
 tienes que entrar en las settings globales > your_id se encontrara el valor para 
 `ORG_ID` y la del `PROJECT_ID` entra al proyecto y copia  el nombre del proyecto en este caso https://vercel.com/jmestrelozano/github-actions-cronjobs seria `github-actions-cronjobs` como su valor
 
+- para obtener un `VERCEL_TOKEN` RECUERDA que tienes que crear uno para tu proyecto en especifico - asegurate de guardarlo -> https://vercel.com/account/tokens
+- para obtener el `GH_PAT` RECUERDA que tienes que generarlo en tu github en developer settings -> https://github.com/settings/tokens asegurate de crear tu token y guardarlo
